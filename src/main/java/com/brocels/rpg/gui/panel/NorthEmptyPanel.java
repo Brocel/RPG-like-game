@@ -17,6 +17,6 @@ public class NorthEmptyPanel extends JPanel{
 
 	public NorthEmptyPanel() {
 		this.setPreferredSize(new Dimension(500, 50));
-		this.setBackground(Color.LIGHT_GRAY);
+		this.setBackground(Color.DARK_GRAY);
 	}
 }
