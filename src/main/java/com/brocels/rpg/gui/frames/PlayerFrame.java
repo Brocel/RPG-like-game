@@ -9,7 +9,10 @@ import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.JRootPane;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
+
+import com.brocels.rpg.gui.panel.PlayerControlsPanel;
 
 /**
  * Player controls Frame
@@ -23,9 +26,10 @@ public class PlayerFrame extends JFrame{
 	private static final long serialVersionUID = 1L;
 
 	/**
-	 * Contain every imported panels that will be added to the player frame
+	 * Player's controls panel that will be added to the player frame
 	 */
-	private JPanel playerPanel;
+	@Autowired
+	private PlayerControlsPanel playerPanel;
 	
 	public PlayerFrame() {}
 	
@@ -37,9 +41,6 @@ public class PlayerFrame extends JFrame{
 		// Hide the titlebar for player JFrame
 		setUndecorated(true);
 		getRootPane().setWindowDecorationStyle(JRootPane.NONE);
-		
-		this.playerPanel = new JPanel();
-		this.playerPanel.setBackground(Color.LIGHT_GRAY);
 		
 		this.add(playerPanel);
 		this.setVisible(true);

@@ -1,5 +1,7 @@
 package com.brocels.rpg.gui.panel;
 
+import java.awt.Color;
+
 import javax.annotation.PostConstruct;
 import javax.swing.JPanel;
 
@@ -23,6 +25,7 @@ public class PlayerControlsPanel extends JPanel{
 
 	@PostConstruct
 	public void createPlayerControlsGUI() {
-		
+		// Background
+		this.setBackground(Color.LIGHT_GRAY);
 	}
 }
