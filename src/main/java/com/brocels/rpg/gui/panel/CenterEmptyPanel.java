@@ -17,7 +17,7 @@ public class CenterEmptyPanel extends JPanel{
 	
 	public CenterEmptyPanel() {
 		this.setPreferredSize(new Dimension(1100, 650));
-		this.setBackground(Color.DARK_GRAY);
+		this.setBackground(Color.LIGHT_GRAY);
 	}
 
 }

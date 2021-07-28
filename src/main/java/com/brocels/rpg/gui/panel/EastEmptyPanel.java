@@ -17,7 +17,7 @@ public class EastEmptyPanel extends JPanel{
 	
 	public EastEmptyPanel() {
 		this.setPreferredSize(new Dimension(200, 800));
-		this.setBackground(Color.DARK_GRAY);
+		this.setBackground(Color.CYAN);
 	}
 
 }

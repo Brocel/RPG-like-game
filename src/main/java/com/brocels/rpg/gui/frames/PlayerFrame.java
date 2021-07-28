@@ -28,7 +28,7 @@ public class PlayerFrame extends JFrame{
 	
 	@PostConstruct
 	public void createPlayerGUI() {
-		this.setBounds(350, 800, 1100, 200);
+		this.setBounds(350, 830, 1100, 200);
 		this.setResizable(false);
 		
 		// Hide the titlebar for player JFrame

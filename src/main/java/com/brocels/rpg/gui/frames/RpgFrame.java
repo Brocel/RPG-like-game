@@ -11,7 +11,11 @@ import javax.swing.JPanel;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
+import com.brocels.rpg.gui.panel.CenterEmptyPanel;
+import com.brocels.rpg.gui.panel.EastEmptyPanel;
+import com.brocels.rpg.gui.panel.NorthEmptyPanel;
 import com.brocels.rpg.gui.panel.SouthEmptyPanel;
+import com.brocels.rpg.gui.panel.WestEmptyPanel;
 
 @Component
 public class RpgFrame extends JFrame{
@@ -23,6 +27,14 @@ public class RpgFrame extends JFrame{
 
 	@Autowired
 	private SouthEmptyPanel southEmptyPanel;
+	@Autowired
+	private NorthEmptyPanel northEmptyPanel;
+	@Autowired
+	private WestEmptyPanel westEmptyPanel;
+	@Autowired
+	private EastEmptyPanel eastEmptyPanel;
+	@Autowired
+	private CenterEmptyPanel centerEmptyPanel;
 	
 	/**
 	 * Contain every imported panels that will be added to the main frame
@@ -45,6 +57,10 @@ public class RpgFrame extends JFrame{
 		this.mainPanel.setLayout(new BorderLayout());
 		
 		this.mainPanel.add(southEmptyPanel, BorderLayout.SOUTH);
+		this.mainPanel.add(northEmptyPanel, BorderLayout.NORTH);
+		this.mainPanel.add(westEmptyPanel, BorderLayout.WEST);
+		this.mainPanel.add(eastEmptyPanel, BorderLayout.EAST);
+		this.mainPanel.add(centerEmptyPanel, BorderLayout.CENTER);
 		
 		this.add(mainPanel);
 		this.setVisible(true);
