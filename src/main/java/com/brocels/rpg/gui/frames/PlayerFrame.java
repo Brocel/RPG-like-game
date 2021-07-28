@@ -11,6 +11,9 @@ import javax.swing.JRootPane;
 
 import org.springframework.stereotype.Component;
 
+/**
+ * Player controls Frame
+ */
 @Component
 public class PlayerFrame extends JFrame{
 
