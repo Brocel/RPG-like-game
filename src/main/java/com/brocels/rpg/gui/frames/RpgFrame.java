@@ -33,7 +33,7 @@ public class RpgFrame extends JFrame{
 	
 	@PostConstruct
 	public void createMainGUI() {
-		this.setBounds(100, 70, 1100, 500);
+		this.setBounds(150, 0, 1500, 800);
 		this.setResizable(false);
 		this.addWindowListener(new WindowAdapter() {
 			public void windowClosing(WindowEvent e ) {

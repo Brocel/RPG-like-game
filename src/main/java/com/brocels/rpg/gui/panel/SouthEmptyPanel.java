@@ -15,7 +15,7 @@ public class SouthEmptyPanel extends JPanel{
 	
 	public SouthEmptyPanel() {
 		this.setPreferredSize(new Dimension(500, 100));
-		this.setBackground(Color.BLACK);
+		this.setBackground(Color.GRAY);
 		this.setLayout(new GridLayout(2,1));
 	}
 
