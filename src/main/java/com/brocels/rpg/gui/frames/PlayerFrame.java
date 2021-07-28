@@ -42,6 +42,7 @@ public class PlayerFrame extends JFrame{
 		setUndecorated(true);
 		getRootPane().setWindowDecorationStyle(JRootPane.NONE);
 		
+		//playerPanel = new PlayerControlsPanel();
 		this.add(playerPanel);
 		this.setVisible(true);
 		
