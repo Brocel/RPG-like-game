@@ -18,5 +18,10 @@ public class SouthEmptyPanel extends JPanel{
 		this.setBackground(Color.GRAY);
 		//this.setLayout(new GridLayout(2,1));
 	}
+	
+	public void showPanel(JPanel panelToShow) {
+		
+		this.add(panelToShow);
+	}
 
 }
