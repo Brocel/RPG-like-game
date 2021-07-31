@@ -6,7 +6,7 @@ import javax.swing.JPanel;
 import org.springframework.stereotype.Component;
 
 /**
- * Current Player Informations Panel
+ * Current Player Informations Panel (North ?)
  */
 @Component
 public class CurrentPlayerPanel extends JPanel{

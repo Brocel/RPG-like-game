@@ -6,6 +6,8 @@ import java.awt.Dimension;
 import java.awt.GridLayout;
 
 import javax.annotation.PostConstruct;
+import javax.swing.Box;
+import javax.swing.BoxLayout;
 import javax.swing.JButton;
 import javax.swing.JComboBox;
 import javax.swing.JLabel;
@@ -29,7 +31,7 @@ public class PlayerControlsPanel extends JPanel{
 	 */
 	private static final long serialVersionUID = 1L;
 	
-	private JPanel messagePane;
+	private Box messageBox;
 	private JLabel messageLabel;
 	private JTextArea message;
 	private JButton submitMessage;
@@ -50,16 +52,6 @@ public class PlayerControlsPanel extends JPanel{
 		// Layout
 		this.setLayout(new GridLayout(1,3));
 		// Elements
-		// Message
-		messagePane = new JPanel();
-		messagePane.setLayout(new GridLayout(3,1));
-		messageLabel = new JLabel("Message", SwingConstants.CENTER);
-		message = new JTextArea();
-		message.setEditable(true);
-		submitMessage = new JButton("Submit Message");
-		messagePane.add(messageLabel);
-		messagePane.add(message);
-		messagePane.add(submitMessage);
 		// Dice
 		dicePane = new JPanel();
 		dicePane.setLayout(new GridLayout(2,1));
@@ -79,12 +71,27 @@ public class PlayerControlsPanel extends JPanel{
 		// Adding elements
 		this.add(choicePane);
 		this.add(dicePane);
-		this.add(messagePane);
+		buildMessagePane();
 	}
 	
 	public void updateChoices(String[] choices) {
 		for(int i=0; i<choices.length; i++) {
 			choiceBox.addItem(choices[i]);
 		}
+	}
+	
+	public void buildMessagePane() {
+		messageBox = new Box(BoxLayout.Y_AXIS);
+		messageLabel = new JLabel("Message", SwingConstants.CENTER);
+		message = new JTextArea();
+		message.setEditable(true);
+		submitMessage = new JButton("Submit Message");
+		Box content = new Box(BoxLayout.X_AXIS);
+		messageBox.add(messageLabel);
+		content.add(message);
+		content.add(submitMessage);
+		messageBox.add(content);
+
+		this.add(messageBox);
 	}
 }
